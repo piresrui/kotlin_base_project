@@ -1,0 +1,4 @@
+application:
+  external-systems:
+    business-sector:
+      host: "https://challenge-business-sector-api.meza.talkdeskstg.com"
