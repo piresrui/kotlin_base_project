@@ -8,6 +8,8 @@ plugins {
 	kotlin("plugin.spring") version "1.4.31" apply true
 	kotlin("plugin.allopen") version "1.4.31" apply true
 
+	id("org.unbroken-dome.test-sets") version "3.0.1"
+
     application
 	java
 }
@@ -62,4 +64,8 @@ tasks {
 	withType<Test> {
 		useJUnitPlatform()
 	}
+}
+
+testSets {
+	create("integrationTest")
 }

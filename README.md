@@ -1,10 +1,17 @@
-# Base app
-
+# Phone Aggregator
 
 ## Test
 
 ```bash
 ./gradlew test
+```
+
+
+## Integration Test
+
+```bash
+docker-compose up -d --build
+./gradlew integrationTest
 ```
 
 ## Build and run
@@ -18,8 +25,6 @@ docker run -p 8080:8080 -d baseapp:0.0.1
 ```bash
 docker-compose up -d --build
 ```
-
-
 
 
 # Thoughts
