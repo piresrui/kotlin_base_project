@@ -1,6 +1,5 @@
 package com.rpires.projects.base.controllers
 
-import com.rpires.projects.base.api.AggregateModel
 import com.rpires.projects.base.data.HelperModel
 import com.rpires.projects.base.services.SectorService
 import com.rpires.projects.base.services.ValidatorService
@@ -22,6 +21,8 @@ class AggregateController(
 
     @PostMapping(path=["/aggregate"], consumes = [MediaType.APPLICATION_JSON_VALUE], produces = [MediaType.APPLICATION_JSON_VALUE])
     fun aggregate(@RequestBody numbers: List<String>): ResponseEntity<MutableMap<String, MutableMap<String, Int>>> {
+
+        logger.info("Request for /aggregate with $numbers")
 
         val response: MutableMap<String, MutableMap<String, Int>> = mutableMapOf()
 

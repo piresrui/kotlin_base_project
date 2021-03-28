@@ -52,7 +52,7 @@ tasks {
 
 	withType<org.springframework.boot.gradle.tasks.bundling.BootJar> {
 		archiveFileName.set("app.jar")
-		mainClassName = "com.rpires.projects.base.TbdApplicationKt"
+		mainClassName = "com.rpires.projects.base.PhoneAggregatorApplicationKt"
 	}
 
     withType<org.springframework.boot.gradle.tasks.run.BootRun> {
