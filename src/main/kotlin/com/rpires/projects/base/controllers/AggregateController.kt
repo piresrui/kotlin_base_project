@@ -28,7 +28,8 @@ class AggregateController(
 
         numbers.stream()
             .map { validatorService.validateString(it) }
-            .filter { it.first }
+            .filter { it.first && it.second != null }
+            // This is sketchy but safe since we know the second will never reach here as null
             .map { HelperModel(it.second!!.prefix!!, sectorService.getSector(it.second!!.number)!!) }
             .forEach {
                 response.putIfAbsent(it.prefix, mutableMapOf())
